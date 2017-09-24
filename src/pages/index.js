@@ -1,7 +1,12 @@
 import React from "react"
 
 export default () =>
-  <div>
+  <div style={
+    {
+      margin: '3rem auto',
+      maxWidth: 600
+    }
+  }>
     <h1>Richard Hamming on Luck</h1>
     <div>
       <p>
