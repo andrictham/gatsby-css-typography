@@ -1,4 +1,5 @@
 import React from "react"
+import Link from 'gatsby-link'
 
 export default () =>
   <div style={
@@ -27,4 +28,6 @@ export default () =>
       </blockquote>
     </div>
     <p>Posted April 09, 2011</p>
+
+    <Link to="/about-css-modules">About CSS Modules</Link>
   </div>
