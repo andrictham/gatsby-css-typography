@@ -3,11 +3,15 @@ import Container from '../components/Container'
 import styles from './about-css-modules.module.css'
 
 const User = ({avatar, username, excerpt}) =>
-  <div>
-    <img src={avatar} alt=""/>
-    <div>
-      <h2>{username}</h2>
-      <p>{excerpt}</p>
+  <div className={styles.user}>
+    <img src={avatar} className={styles.avatar} alt=""/>
+    <div className={styles.description}>
+      <h2 className={styles.username}>
+        {username}
+      </h2>
+      <p className={styles.excerpt}>
+        {excerpt}
+      </p>
     </div>
   </div>
 
