@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '../components/Container'
-import styles from './about-css-modules.module.css'
+import styles from './about-css-modules.module.scss'
 
 const User = ({avatar, username, excerpt}) =>
   <div className={styles.user}>
