@@ -1,6 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {ThemeProvider} from 'styled-components'
 import Container from '../components/Container'
+
+const theme = {
+  avatarSize: '96px'
+}
 
 const UserWrapper = styled.div`
   display: flex;
@@ -11,9 +15,9 @@ const UserWrapper = styled.div`
   }
 `
 const Avatar = styled.img`
-  flex: 0 0 96px;
-  width: 96px;
-  height: 96px;
+  flex: 0 0 ${props => props.theme.avatarSize};
+  width: ${props => props.theme.avatarSize};
+  height: ${props => props.theme.avatarSize};
   margin: 0;
 `
 const Description = styled.div`
@@ -30,17 +34,19 @@ const Excerpt = styled.p`
 `
 
 const User = ({avatar, username, excerpt}) =>
-  <UserWrapper>
-    <Avatar src={avatar} alt=""/>
-    <Description>
-      <Username>
-        {username}
-      </Username>
-      <Excerpt>
-        {excerpt}
-      </Excerpt>
-    </Description>
-  </UserWrapper>
+  <ThemeProvider theme={theme}>
+    <UserWrapper>
+      <Avatar src={avatar} alt=""/>
+      <Description>
+        <Username>
+          {username}
+        </Username>
+        <Excerpt>
+          {excerpt}
+        </Excerpt>
+      </Description>
+    </UserWrapper>
+  </ThemeProvider>
 
 export default () =>
   <Container>
