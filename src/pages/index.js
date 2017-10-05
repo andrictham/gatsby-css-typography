@@ -29,5 +29,5 @@ export default () =>
     </div>
     <p>Posted April 09, 2011</p>
 
-    <Link to="/about-css-modules">About CSS Modules</Link>
+    <Link to="/about-glamor">About Glamor</Link>
   </div>
