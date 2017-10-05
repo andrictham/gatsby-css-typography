@@ -1,14 +1,34 @@
 import React from 'react'
 import Container from '../components/Container'
 
+const avatarSize = `96`
+
 const User = ({avatar, username, excerpt}) =>
-  <div>
-    <img src={avatar} alt=""/>
-    <div>
-      <h2>
+  <div css={{
+    display: `flex`,
+    alignItems: `center`,
+    margin: `0 auto 12px auto`,
+    "&:last-child": {
+      marginBottom: 0
+    }
+  }}>
+
+    <img
+      src={avatar}
+      alt=""
+      css={{
+        flex: `0 0 ${avatarSize}px`,
+        width: `${avatarSize}px`,
+        height: `${avatarSize}px`,
+        margin: 0
+      }}
+    />
+
+    <div css={{ flex: 1, marginLeft: 18, padding: 12 }}>
+      <h2 css={{ margin: `0 0 12px 0`, padding: 0 }}>
         {username}
       </h2>
-      <p>
+      <p css={{ margin: 0 }}>
         {excerpt}
       </p>
     </div>
